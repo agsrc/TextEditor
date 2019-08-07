@@ -147,11 +147,9 @@ public abstract class Document {
 	/** return the Flesch readability score of this document */
 	public double getFleschScore()
 	{
-	    double fleschScore;
-	    BasicDocument bdObject = new BasicDocument(text);
-	    fleschScore = 206.835 -1.015*(bdObject.getNumWords()/bdObject.getNumSentences())-84.6*(bdObject.getNumSyllables()/bdObject.getNumWords());
-		System.out.println("fleschScore:"+fleschScore);
-		return fleschScore;
+		double wordCount = (double)getNumWords();
+		return 206.835 - (1.015 * ((wordCount)/getNumSentences())) 
+				- (84.6 * (((double)getNumSyllables())/wordCount));
 	}
 	
 	

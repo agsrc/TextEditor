@@ -130,6 +130,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 		}
 		n.data = element;
 		return element;
+	}   
 }
 
 class LLNode<E> 
@@ -138,12 +139,8 @@ class LLNode<E>
 	LLNode<E> next;
 	E data;
 
-	public LLNode()
-	{
-		this.data = null;
-		this.prev = null;
-		this.next = null;
-	}
+
+
 	public LLNode(E e) 
 	{
 		this.data = e;
@@ -151,5 +148,4 @@ class LLNode<E>
 		this.next = null;
 	}
 
-}
 }
